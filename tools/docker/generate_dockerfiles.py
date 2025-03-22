@@ -46,8 +46,8 @@ def main() -> None:
 
     with OutputFile(f"Dockerfile.test_minimal", args.check) as f:
         f.write(install_deps_ubuntu())
-        f.write(install_dbcsr("minimal", "ssmp"))
-        f.write(regtest_cmake("minimal", "ssmp"))
+        f.write(install_dbcsr("toolchain_minimal", "ssmp"))
+        f.write(regtest_cmake("toolchain_minimal", "ssmp"))
 
     with OutputFile(f"Dockerfile.test_spack", args.check) as f:
         f.write(install_deps_spack())
